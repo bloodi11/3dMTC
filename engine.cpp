@@ -1,1 +1,3 @@
-//brak
+WorkSpace::Workspace(){
+
+}
