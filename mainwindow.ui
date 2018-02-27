@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>701</width>
-    <height>412</height>
+    <height>457</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@
       </property>
      </widget>
     </item>
-    <item row="19" column="2">
+    <item row="20" column="2">
      <widget class="QSlider" name="horizontalSlider">
       <property name="maximum">
        <number>100</number>
@@ -48,7 +48,48 @@
       </property>
      </widget>
     </item>
-    <item row="14" column="3" rowspan="3">
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Convert</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="text">
+       <string>ZOOM +</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>Edit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="text">
+       <string>Export</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="text">
+       <string>ZOOM -</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2" rowspan="16">
+     <widget class="QOpenGLWidget" name="openGLWidget"/>
+    </item>
+    <item row="2" column="1" rowspan="19">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+    <item row="5" column="3">
      <widget class="QSlider" name="verticalSlider">
       <property name="maximum">
        <number>100</number>
@@ -58,47 +99,6 @@
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>Convert</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="2">
-     <widget class="QPushButton" name="pushButton_6">
-      <property name="text">
-       <string>ZOOM -</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="text">
-       <string>ZOOM +</string>
-      </property>
-     </widget>
-    </item>
-    <item row="13" column="2" rowspan="4">
-     <widget class="QOpenGLWidget" name="openGLWidget"/>
-    </item>
-    <item row="13" column="1" rowspan="4">
-     <widget class="QTextEdit" name="textEdit"/>
-    </item>
-    <item row="13" column="0">
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="text">
-       <string>Edit</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="0">
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="text">
-       <string>Export</string>
       </property>
      </widget>
     </item>
