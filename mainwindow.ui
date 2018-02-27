@@ -35,19 +35,6 @@
     <item row="0" column="1" colspan="2">
      <widget class="QLineEdit" name="lineEdit"/>
     </item>
-    <item row="5" column="2">
-     <widget class="QSlider" name="verticalSlider">
-      <property name="maximum">
-       <number>100</number>
-      </property>
-      <property name="value">
-       <number>50</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-    </item>
     <item row="6" column="1">
      <widget class="QSlider" name="horizontalSlider">
       <property name="maximum">
@@ -84,6 +71,19 @@
     </item>
     <item row="3" column="1" rowspan="3">
      <widget class="QOpenGLWidget" name="openGLWidget"/>
+    </item>
+    <item row="3" column="2" rowspan="3">
+     <widget class="QSlider" name="verticalSlider">
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
