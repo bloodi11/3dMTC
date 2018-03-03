@@ -25,12 +25,15 @@ WorkSpace::WorkSpace(QString path){
                     if(line[20] == '-')  vertex_temp.setZ( - std::stof(&line[21]));
                         else vertex_temp.setZ(std::stof(&line[20]));
 
+                    vertexDataVector.push_back(vertex_temp);
 
+                    if(line[0] == 'v' && line[1] == 't') break;
                }
 
         }
     file.close();
-/* TEST  >>>>>> */ std::cout << vertex_temp.getX() << std::endl << vertex_temp.getY() <<std::endl<< vertex_temp.getZ() << std::endl;
+
+   /* TEST >>>>> */ for(auto x : vertexDataVector) std::cout << x.getX() << ' ' << x.getY() << ' ' << x.getZ() << std::endl;
 }
 
 Vertex::Vertex(){

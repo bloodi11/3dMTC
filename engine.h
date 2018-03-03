@@ -25,7 +25,7 @@ public:
 
 class WorkSpace{
 private:
-    std::vector<Vertex> vertexVector;
+    std::vector<Vertex> vertexDataVector;
 
 public:
     WorkSpace(QString path);
