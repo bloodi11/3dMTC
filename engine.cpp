@@ -9,10 +9,10 @@ WorkSpace::WorkSpace(QString path){
     std::ifstream file;
     std::string line;
     Vertex vertex_temp;
-    char lineheader[128];
+
     file.open(path.toStdString());
     if (!file.is_open()){
-        std::cerr << "can't open file" << std::endl;
+        std::cerr << "cannot open file cause it not exist" << std::endl;
         exit(404);
     } else
         while (file.good()){
@@ -30,7 +30,7 @@ WorkSpace::WorkSpace(QString path){
 
         }
     file.close();
-// TEST std::cout << vertex_temp.getX() << std::endl << vertex_temp.getY() <<std::endl<< vertex_temp.getZ() << std::endl;
+/* TEST  >>>>>> */ std::cout << vertex_temp.getX() << std::endl << vertex_temp.getY() <<std::endl<< vertex_temp.getZ() << std::endl;
 }
 
 Vertex::Vertex(){

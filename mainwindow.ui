@@ -81,7 +81,7 @@
     <item row="0" column="1" colspan="2">
      <widget class="QLineEdit" name="pathLineEdit">
       <property name="text">
-       <string>szescian_model_10x10.obj</string>
+       <string/>
       </property>
      </widget>
     </item>
