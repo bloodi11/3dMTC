@@ -27,7 +27,6 @@ WorkSpace::WorkSpace(QString path){
 
                     vertexDataVector.push_back(vertex_temp);
 
-                    if(line[0] == 'v' && line[1] == 't') break;
                }
 
         }

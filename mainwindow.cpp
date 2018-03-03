@@ -20,5 +20,5 @@ void MainWindow::on_pushButton_clicked()
             tr("Load 3d model to workspace"), "",
             tr("Object (*.obj);"));
     ui->pathLineEdit->setText(path);
-    std::unique_ptr<WorkSpace> workSpace = std::make_unique<WorkSpace>(ui->pathLineEdit->text());
+    std::unique_ptr<WorkSpace> workSpace = std::make_unique<WorkSpace>(path);
 }
