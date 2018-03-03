@@ -18,6 +18,22 @@
     <bool>true</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <item row="6" column="3">
+     <widget class="QSlider" name="verticalSlider">
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" rowspan="6">
+     <widget class="QOpenGLWidget" name="openGLWidget"/>
+    </item>
     <item row="20" column="0">
      <widget class="QPushButton" name="pushButton_3">
       <property name="text">
@@ -45,13 +61,17 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="2" rowspan="6">
-     <widget class="QOpenGLWidget" name="openGLWidget"/>
-    </item>
-    <item row="1" column="1" colspan="3">
+    <item row="1" column="1" colspan="4">
      <widget class="QProgressBar" name="progressBar">
       <property name="value">
        <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Set path</string>
       </property>
      </widget>
     </item>
@@ -65,10 +85,10 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="pushButton">
+    <item row="20" column="2">
+     <widget class="QPushButton" name="pushButton_5">
       <property name="text">
-       <string>Set path</string>
+       <string>ZOOM +</string>
       </property>
      </widget>
     </item>
@@ -79,30 +99,10 @@
       </property>
      </widget>
     </item>
-    <item row="6" column="3">
-     <widget class="QSlider" name="verticalSlider">
-      <property name="maximum">
-       <number>100</number>
-      </property>
-      <property name="value">
-       <number>50</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-    </item>
     <item row="21" column="2">
      <widget class="QPushButton" name="pushButton_6">
       <property name="text">
        <string>ZOOM -</string>
-      </property>
-     </widget>
-    </item>
-    <item row="20" column="2">
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="text">
-       <string>ZOOM +</string>
       </property>
      </widget>
     </item>

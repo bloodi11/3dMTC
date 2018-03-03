@@ -9,25 +9,28 @@ WorkSpace::WorkSpace(QString path){
     std::ifstream file;
     std::string line;
     Vertex vertex_temp;
-
+    char lineheader[128];
     file.open(path.toStdString());
-    if (file.is_open()){
-            while (!file.eof()){
-                getline(file, line);
-                if(line.at(0) == 'v'){
-                    if(line.at(2) == '-')  vertex_temp.setX( - std::stof(&line.at(3)));
-                        else vertex_temp.setX(std::stof(&line.at(2)));
-                    if(line.at(11) == '-') vertex_temp.setY( - std::stof(&line.at(12)));
-                        else vertex_temp.setY(std::stof(&line.at(11)));
-                    if(line.at(20) == '-')  vertex_temp.setZ( - std::stof(&line.at(21)));
-                        else vertex_temp.setZ(std::stof(&line.at(20)));
+    if (!file.is_open()){
+        std::cerr << "can't open file" << std::endl;
+        exit(404);
+    } else
+        while (file.good()){
+            std::getline(file, line);
+                if(line[0] == 'v' && line[1] == ' '){
+                    if(line[2] == '-')  vertex_temp.setX( - std::stof(&line[3]));
+                        else vertex_temp.setX(std::stof(&line[2]));
+                    if(line[11] == '-') vertex_temp.setY( - std::stof(&line[12]));
+                        else vertex_temp.setY(std::stof(&line[11]));
+                    if(line[20] == '-')  vertex_temp.setZ( - std::stof(&line[21]));
+                        else vertex_temp.setZ(std::stof(&line[20]));
 
-                    vertexVector.push_back(vertex_temp);
-                }
-                }
-            }
-        file.close();
 
+               }
+
+        }
+    file.close();
+// TEST std::cout << vertex_temp.getX() << std::endl << vertex_temp.getY() <<std::endl<< vertex_temp.getZ() << std::endl;
 }
 
 Vertex::Vertex(){
@@ -52,4 +55,16 @@ void Vertex::setY(float y){
 
 void Vertex::setZ(float z){
     _z = z;
+}
+
+float Vertex::getX(){
+    return _x;
+}
+
+float Vertex::getY(){
+    return _y;
+}
+
+float Vertex::getZ(){
+    return _z;
 }
