@@ -11,7 +11,9 @@ WorkSpace::WorkSpace(QString path){
     std::ifstream file;
     std::string line;
     std::string token;
-    Vertex vertex_temp;
+    Vertex v_temp;
+    Vertex vt_temp;
+    Vertex vn_temp;
 
 
     file.open(path.toStdString());
@@ -24,25 +26,28 @@ WorkSpace::WorkSpace(QString path){
             std::istringstream in(line);
 
             in >> token;
-            if(line[0] == 'v' && line[1] == ' '){
-                in >> vertex_temp._x >> vertex_temp._y >> vertex_temp._z;
-                vertexDataVector.push_back(vertex_temp);
+            if(token == "v" && token != "vt"){
+                in >> v_temp._x >> v_temp._y >> v_temp._z;
+                v_data.push_back(v_temp);
             }
+            if(token == "vt"){
+                in >> vt_temp._x >> vt_temp._y >> vt_temp._z;
+                vt_data.push_back(vt_temp);
+            }
+            if(token == "vn"){
+                in >> vn_temp._x >> vn_temp._y >> vn_temp._z;
+                vn_data.push_back(vn_temp);
+            }
+
 
         } //WHILE
     file.close();
 
 
- /* TEST >>>>> */ for(auto x : vertexDataVector) std::cout << x.getX() << ' ' << x.getY() << ' ' << x.getZ() << std::endl;
+ /* TEST >>>>> */ for(auto x : v_data) std::cout << x.getX() << ' ' << x.getY() << ' ' << x.getZ() << std::endl;
+    for(auto x : vt_data) std::cout << x.getX() << ' ' << x.getY() << ' ' << x.getZ() << std::endl;
+     for(auto x : vn_data) std::cout << x.getX() << ' ' << x.getY() << ' ' << x.getZ() << std::endl;
 }
-
-/*TemporaryData::TemporaryData(){
-
-}
-
-void TemporaryData::actualizeTempVertex(){
-    temp_vertex.setX();
-}*/
 
 Vertex::Vertex(){
 

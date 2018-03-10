@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 #include "mainwindow.h"
-//#include "ui_mainwindow.h"
+
 
 class Vertex{
 private:
@@ -31,8 +31,9 @@ public:
 
 class WorkSpace{
 private:
-    std::vector<Vertex> vertexDataVector;
-    //std::unique_ptr<TemporaryData> data_temp;
+    std::vector<Vertex> v_data;
+    std::vector<Vertex> vt_data;
+    std::vector<Vertex> vn_data;
 
 public:
     WorkSpace(QString path);
