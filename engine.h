@@ -1,5 +1,6 @@
 #ifndef ENGINE_H
 #define ENGINE_H
+#include <QOpenGLWidget>
 #include <vector>
 #include <memory>
 #include <string>
@@ -8,7 +9,6 @@
 
 class Vertex{
 private:
-
 
 public:
     float _x;
@@ -31,12 +31,15 @@ public:
 
 class WorkSpace{
 private:
+
+public:
     std::vector<Vertex> v_data;
     std::vector<Vertex> vt_data;
     std::vector<Vertex> vn_data;
+    std::vector<Vertex> f_data;
 
-public:
     WorkSpace(QString path);
 };
+
 
 #endif // ENGINE_H
