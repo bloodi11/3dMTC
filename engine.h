@@ -27,6 +27,18 @@ public:
 
 };
 
+class FaceSet{
+private:
+
+public:
+    float index_v1;
+    float index_v2;
+    float index_v3;
+
+    float index_vn1;
+    float index_vn2;
+    float index_vn3;
+};
 
 
 class WorkSpace{
@@ -36,7 +48,7 @@ public:
     std::vector<Vertex> v_data;
     std::vector<Vertex> vt_data;
     std::vector<Vertex> vn_data;
-    std::vector<Vertex> f_data;
+    std::vector<FaceSet> f_data;
 
     WorkSpace(QString path);
 };

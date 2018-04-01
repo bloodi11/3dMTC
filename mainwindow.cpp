@@ -7,6 +7,8 @@
 #include <iostream>
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
+    connect( ui->zoomPlus_button, SIGNAL( clicked() ), ui->myGLWidget, SLOT( scalePlus() ) );
+    connect( ui->zoomMinus_button, SIGNAL( clicked() ), ui->myGLWidget, SLOT( scaleMinus() ) );
 
 }
 
@@ -14,15 +16,15 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+
+void MainWindow::on_button_setPath_clicked()
 {
     QString path = QFileDialog::getOpenFileName(this,
             tr("Load 3d model to workspace"), "",
             tr("Object (*.obj);"));
     ui->pathLineEdit->setText(path);
-    std::shared_ptr<WorkSpace> workSpace = std::make_shared<WorkSpace>(path);
+    auto workSpace = std::make_unique<WorkSpace>(path);
 
-    ui->myGLWidget->workspace = workSpace;
-
+    ui->myGLWidget->workspace = std::move(workSpace);
 }
 

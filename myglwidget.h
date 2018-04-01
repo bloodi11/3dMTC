@@ -17,15 +17,9 @@ public:
 
     void paintGL();
 
-signals:
-
-public slots:
-
 protected:
     void initializeGL();
-    //void paintGL();
     void resizeGL(int width, int height);
-
     void draw();
 
     QSize minimumSizeHint() const;
@@ -33,11 +27,16 @@ protected:
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
 
+    void changeScale(float scale);
+
 public slots:
     // slots for xyz-rotation slider
     void setXRotation(int angle);
     void setYRotation(int angle);
     void setZRotation(int angle);
+
+    void scalePlus();
+    void scaleMinus();
 
 signals:
     // signaling rotation from mouse movement
@@ -50,9 +49,15 @@ private:
     Vertex v2;
     Vertex v3;
 
+    Vertex n1;
+    Vertex n2;
+    Vertex n3;
+
     int xRot;
     int yRot;
     int zRot;
+
+    float _scale = 0.5;
 
     QPoint lastPos;
 };
