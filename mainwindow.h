@@ -18,6 +18,10 @@ public:
 private slots:
     void on_button_setPath_clicked();
 
+    void on_convert_button_clicked();
+
+    void on_export_button_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

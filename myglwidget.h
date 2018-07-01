@@ -21,6 +21,7 @@ protected:
     void initializeGL();
     void resizeGL(int width, int height);
     void draw();
+    void drawGrid(int HALF_GRID_SIZE);
 
     QSize minimumSizeHint() const;
     QSize sizeHint() const;
@@ -45,19 +46,19 @@ signals:
     void zRotationChanged(int angle);
 
 private:
-    Vertex v1;
-    Vertex v2;
-    Vertex v3;
+   // Vertex v1;
+   // Vertex v2;
+   // Vertex v3;
 
-    Vertex n1;
-    Vertex n2;
-    Vertex n3;
+    //Vertex n1;
+  //  Vertex n2;
+  //  Vertex n3;
 
     int xRot;
     int yRot;
     int zRot;
 
-    float _scale = 0.5;
+    float _scale = 0.2f;
 
     QPoint lastPos;
 };
